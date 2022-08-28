@@ -1,5 +1,8 @@
 version: '3.7'
 
+networks:
+  big_data_front:
+
 services:
   client:
     container_name: client
@@ -7,3 +10,15 @@ services:
     build: .
     ports:
       - '5000:80'
+    networks:
+      - big_data_front
+
+  wiremock:
+    container_name: wiremock
+    image: rodolpheche/wiremock
+    volumes:
+      - ./wiremock:/home/wiremock
+    ports:
+      - "5050:8080"
+    networks:
+      - big_data_front

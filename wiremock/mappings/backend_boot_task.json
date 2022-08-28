@@ -1,0 +1,75 @@
+{
+	"mappings": [
+		{
+			"request": {
+				"method": "GET",
+				"urlPath": "/tasks/boot/word_count",
+				"queryParameters": {
+					"filename": {
+						"matches": "^([a-zA-Z]+).sgm$",
+						"absent": true
+					}
+				}
+			},
+			"response": {
+				"status": 200,
+				"jsonBody": {
+					"response": "El número de palabras en el archivo es 1200"
+				}
+			}
+		},
+		{
+			"request": {
+				"method": "GET",
+				"urlPath": "/tasks/boot/word_frequency",
+				"queryParameters": {
+					"filename": {
+						"matches": "^([a-zA-Z]+).sgm$",
+						"absent": true
+					},
+					"limit": {
+						"matches": "^([0-9]+)$",
+						"absent": true
+					}
+				}
+			},
+			"response": {
+				"status": 200,
+				"jsonBody": {
+					"lorem": 12,
+					"ipsum": 15,
+					"carpe": 20,
+					"diem": 9
+				}
+			}
+		},
+		{
+			"request": {
+				"method": "GET",
+				"urlPath": "/tasks/boot/challenges_by_files",
+				"queryParameters": {
+					"number_of_files": {
+						"matches": "^([0-9]+)$",
+						"absent": true
+					},
+					"limit": {
+						"matches": "^([0-9]+)$",
+						"absent": true
+					}
+				}
+			},
+			"response": {
+				"status": 200,
+				"jsonBody": {
+					"word_frequency": {
+						"lorem": 12,
+						"ipsum": 15,
+						"carpe": 20,
+						"diem": 9
+					},
+					"word_count": "El número de palabras en el archivo es 1200"
+				}
+			}
+		}
+	]
+}
