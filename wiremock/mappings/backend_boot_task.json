@@ -3,7 +3,7 @@
 		{
 			"request": {
 				"method": "GET",
-				"urlPath": "/tasks/boot/word_count",
+				"urlPath": "/api/big_data/tasks/boot/word_count",
 				"queryParameters": {
 					"filename": {
 						"matches": "^([a-zA-Z]+).sgm$",
@@ -21,7 +21,7 @@
 		{
 			"request": {
 				"method": "GET",
-				"urlPath": "/tasks/boot/word_frequency",
+				"urlPath": "/api/big_data/tasks/boot/word_frequency",
 				"queryParameters": {
 					"filename": {
 						"matches": "^([a-zA-Z]+).sgm$",
@@ -46,7 +46,7 @@
 		{
 			"request": {
 				"method": "GET",
-				"urlPath": "/tasks/boot/challenges_by_files",
+				"urlPath": "/api/big_data/tasks/boot/challenges_by_files",
 				"queryParameters": {
 					"number_of_files": {
 						"matches": "^([0-9]+)$",
