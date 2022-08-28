@@ -3,6 +3,21 @@
 		{
 			"request": {
 				"method": "GET",
+				"urlPath": "/api/big_data/tasks/boot/file_list"
+			},
+			"response": {
+				"status": 200,
+				"jsonBody": [
+					"data/reut2-000.sgm",
+					"data/reut2-009.sgm",
+					"data/reut2-004.sgm",
+					"data/reut2-018.sgm"
+				]
+			}
+		},
+		{
+			"request": {
+				"method": "GET",
 				"urlPath": "/api/big_data/tasks/boot/word_count",
 				"queryParameters": {
 					"filename": {
@@ -14,7 +29,7 @@
 			"response": {
 				"status": 200,
 				"jsonBody": {
-					"response": "El número de palabras en el archivo es 1200"
+					"response": 1200
 				}
 			}
 		},
@@ -35,12 +50,24 @@
 			},
 			"response": {
 				"status": 200,
-				"jsonBody": {
-					"lorem": 12,
-					"ipsum": 15,
-					"carpe": 20,
-					"diem": 9
-				}
+				"jsonBody": [
+					{
+						"word": "lorem",
+						"count": 12
+					},
+					{
+						"word": "ipsum",
+						"count": 15
+					},
+					{
+						"word": "carpe",
+						"count": 20
+					},
+					{
+						"word": "diem",
+						"count": 9
+					}
+				]
 			}
 		},
 		{
@@ -61,13 +88,25 @@
 			"response": {
 				"status": 200,
 				"jsonBody": {
-					"word_frequency": {
-						"lorem": 12,
-						"ipsum": 15,
-						"carpe": 20,
-						"diem": 9
-					},
-					"word_count": "El número de palabras en el archivo es 1200"
+					"word_frequency": [
+						{
+							"word": "lorem",
+							"count": 12
+						},
+						{
+							"word": "ipsum",
+							"count": 15
+						},
+						{
+							"word": "carpe",
+							"count": 20
+						},
+						{
+							"word": "diem",
+							"count": 9
+						}
+					],
+					"word_count": 1200
 				}
 			}
 		}
