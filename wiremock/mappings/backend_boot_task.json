@@ -17,14 +17,8 @@
 		},
 		{
 			"request": {
-				"method": "GET",
-				"urlPath": "/api/big_data/tasks/boot/word_count",
-				"queryParameters": {
-					"filename": {
-						"matches": "^reut2-([0-9]{3}).sgm$",
-						"absent": true
-					}
-				}
+				"method": "POST",
+				"urlPath": "/api/big_data/tasks/boot/word_count"
 			},
 			"response": {
 				"status": 200,
@@ -35,13 +29,9 @@
 		},
 		{
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"urlPath": "/api/big_data/tasks/boot/word_frequency",
 				"queryParameters": {
-					"filename": {
-						"matches": "^reut2-([0-9]{3}).sgm$",
-						"absent": true
-					},
 					"limit": {
 						"matches": "^([0-9]+)$",
 						"absent": true
