@@ -6,7 +6,7 @@
 				"urlPath": "/api/big_data/tasks/boot/word_count",
 				"queryParameters": {
 					"filename": {
-						"matches": "^([a-zA-Z]+).sgm$",
+						"matches": "^reut2-([0-9]{3}).sgm$",
 						"absent": true
 					}
 				}
@@ -24,7 +24,7 @@
 				"urlPath": "/api/big_data/tasks/boot/word_frequency",
 				"queryParameters": {
 					"filename": {
-						"matches": "^([a-zA-Z]+).sgm$",
+						"matches": "^reut2-([0-9]{3}).sgm$",
 						"absent": true
 					},
 					"limit": {
